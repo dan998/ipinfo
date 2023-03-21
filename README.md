@@ -13,16 +13,16 @@ IP-Tracer is used to track an ip address. IP-Tracer is developed for Termux and 
 
 * `apt install git -y`
 
-* `git clone https://github.com/rajkumardusad/IP-Tracer.git`
+* `git clone https://github.com/dan998/ipinfo.git`
 
-* `cd IP-Tracer`
+* `cd ipinfo`
 
 * `chmod +x install`
 
 * `sh install` or `./install`
 
 
-## How to use IP-Tracer
+## How to use ipinfo
 
 * `trace -m` to track your own ip address.
 
