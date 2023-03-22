@@ -5,17 +5,17 @@ class set {
     global $system;
     // removing old files
     if ($system=="termux") {
-      system("rm -rf /data/data/com.termux/files/usr/share/IP-Tracer");
+      system("rm -rf /data/data/com.termux/files/usr/share/ipinfo");
       system("rm -rf /data/data/com.termux/files/usr/bin/ip-tracer");
       system("rm -rf /data/data/com.termux/files/usr/bin/trace");
     } elseif ($system=="ubuntu") {
       system("sudo rm -rf /usr/bin/ip-tracer");
       system("sudo rm -rf /usr/bin/trace");
-      system("sudo rm -rf /usr/share/IP-Tracer");
+      system("sudo rm -rf /usr/share/ipinfo");
     } else {
       system("rm -rf /usr/bin/ip-tracer");
       system("rm -rf /usr/bin/trace");
-      system("rm -rf /usr/share/IP-Tracer");
+      system("rm -rf /usr/share/ipinfo");
     }
     
     // adding bin file
@@ -36,28 +36,28 @@ class set {
       system("chmod +x /usr/bin/trace");
     }
 
-    // copy files from IP-Tracer to .IP-Tracer directory.
+    // copy files from ipinfo to .ipinfo directory.
     if ($system=="termux") {
-      system("mkdir /data/data/com.termux/files/usr/share/IP-Tracer");
+      system("mkdir /data/data/com.termux/files/usr/share/ipinfo");
       system("chmod +x * *.* .*.*");
-      system("mv -v * *.* .*.* /data/data/com.termux/files/usr/share/IP-Tracer/");
+      system("mv -v * *.* .*.* /data/data/com.termux/files/usr/share/ipinfo/");
     } elseif ($system=="ubuntu") {
-      system("sudo mkdir /usr/share/IP-Tracer/");
+      system("sudo mkdir /usr/share/ipinfo/");
       system("sudo chmod +x * *.* .*.*");
-      system("sudo mv -v * *.* .*.* /usr/share/IP-Tracer/");
+      system("sudo mv -v * *.* .*.* /usr/share/ipinfo/");
     } else {
-      system("mkdir /usr/share/IP-Tracer");
+      system("mkdir /usr/share/ipinfo");
       system("chmod +x * *.* .*.*");
-      system("mv -v * *.* .*.* /usr/share/IP-Tracer/");
+      system("mv -v * *.* .*.* /usr/share/ipinfo/");
     }
     
-    // removing IP-Tracer directory
+    // removing ipinfo directory
     if ($system=="termux") {
-      system("cd .. && rm -rf IP-Tracer");
+      system("cd .. && rm -rf ipinfo");
     } elseif ($system=="ubuntu") {
-      system("cd .. && sudo rm -rf IP-Tracer");
+      system("cd .. && sudo rm -rf ipinfo");
     } else {
-      system("cd .. && rm -rf IP-Tracer");
+      system("cd .. && rm -rf ipinfo");
     }
   }
   function logo() {
@@ -80,8 +80,8 @@ class set {
 \033[00m
 EOL;
 
-    if (file_exists("/usr/bin/ip-tracer") || file_exists("/data/data/com.termux/files/usr/bin/ip-tracer")) {
-      echo "\033[01;32m      IP-Tracer installed Successfully !!!\033[00m\n";
+    if (file_exists("/usr/bin/ip-tracer") || file_exists("/data/data/com.termux/files/usr/bin/ipinfo")) {
+      echo "\033[01;32m      ipinfo installed Successfully !!!\033[00m\n";
       echo <<<EOL
 
 \033[01;37m ----------------------------------------------
@@ -97,7 +97,7 @@ EOL;
 
 EOL;
     } else {
-      echo "\n\n\033[01;31m  Sorry IP-Tracer is not installed !!!\033[00m";
+      echo "\n\n\033[01;31m  Sorry ipinfo is not installed !!!\033[00m";
     }
   }
 }
