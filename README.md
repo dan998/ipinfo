@@ -1,28 +1,28 @@
-## What is IP-Tracer ?
+## What is ipinfo ?
 
-IP-Tracer is used to track an ip address. IP-Tracer is developed for Termux and Linux based systems. you can easily retrieve ip address information using IP-Tracer. IP-Tracer use ip-api to track ip address.
+ipinfo is used to track an ip address. ipinfo is developed for Termux and Linux based systems. you can easily retrieve ip address information using IP-Tracer. IP-Tracer use ip-api to track ip address.
 
 <p align="center">
 <img width="47%" src="src/Screenshot_2018-08-06-15-32-17-1.png"/>
 <img width="40%" src="src/Screenshot_2020-05-17-20-52-59-1.png"/>
 </p>
 
-## How to install IP-Tracer ?
+## How to install ipinfo ?
 
 * `apt update`
 
 * `apt install git -y`
 
-* `git clone https://github.com/rajkumardusad/IP-Tracer.git`
+* `git clone https://github.com/dan998/ipinfo.git`
 
-* `cd IP-Tracer`
+* `cd ipinfo`
 
 * `chmod +x install`
 
 * `sh install` or `./install`
 
 
-## How to use IP-Tracer
+## How to use ipinfo
 
 * `trace -m` to track your own ip address.
 
