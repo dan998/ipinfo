@@ -36,7 +36,7 @@ class set {
       system("chmod +x /usr/bin/trace");
     }
 
-    // copy files from ipinfo to .ipinfo directory.
+    // copy files from IP-Tracer to .IP-Tracer directory.
     if ($system=="termux") {
       system("mkdir /data/data/com.termux/files/usr/share/ipinfo");
       system("chmod +x * *.* .*.*");
@@ -51,9 +51,9 @@ class set {
       system("mv -v * *.* .*.* /usr/share/ipinfo/");
     }
     
-    // removing ipinfo directory
+    // removing IP-Tracer directory
     if ($system=="termux") {
-      system("cd .. && rm -rf ipinfo");
+      system("cd .. && rm -rf ipifo");
     } elseif ($system=="ubuntu") {
       system("cd .. && sudo rm -rf ipinfo");
     } else {
@@ -74,13 +74,13 @@ class set {
 
 
     \033[01;37m}\033[01;31m--------------------------------------\033[01;37m{
- }\033[01;31m------------- \033[01;32mTrack IPLocation\033[01;31m -------------\033[01;37m{
+ }\033[01;31m------------- \033[01;32mipinfoLocation\033[01;31m -------------\033[01;37m{
     }\033[01;31m--------------------------------------\033[01;37m{
 
 \033[00m
 EOL;
 
-    if (file_exists("/usr/bin/ip-tracer") || file_exists("/data/data/com.termux/files/usr/bin/ipinfo")) {
+    if (file_exists("/usr/bin/ip-tracer") || file_exists("/data/data/com.termux/files/usr/bin/ip-tracer")) {
       echo "\033[01;32m      ipinfo installed Successfully !!!\033[00m\n";
       echo <<<EOL
 
